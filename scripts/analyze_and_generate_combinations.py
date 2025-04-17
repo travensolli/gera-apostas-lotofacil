@@ -111,9 +111,9 @@ def analyze_data(num_concursos):
         "classificacoes": analyze_classificacoes(results, classificacoes)
     }
 
-    return analise
+    return classificacoes, analise
 
-def generate_combinations(analise, quantidade):
+def generate_combinations(classificacoes, analise, quantidade):
     """Gera um prompt para a API da OpenAI sugerir combinações de apostas."""
     if not isinstance(quantidade, int) or quantidade <= 0:
         raise ValueError("quantidade deve ser um inteiro positivo")
@@ -127,7 +127,7 @@ def generate_combinations(analise, quantidade):
 
         Para gerar essas combinações, você deve se basear nas seguintes análises de dados históricos da Lotofácil, extraídas de concursos anteriores:
 
-        1. **Frequências das dezenas (top 15)**:
+        1. **Frequências das dezenas**:
         - Dados: {analise['frequencias']}
         - Descrição: Esta é uma lista das dezenas que mais foram sorteadas nos concursos analisados, ordenadas da mais frequente para a menos frequente. 
         Cada item da lista é uma tupla no formato (dezena, frequência), onde 'dezena' é uma string (ex.: '10') representando o número sorteado e 'frequência' é um inteiro indicando quantas vezes essa dezena apareceu. 
@@ -149,10 +149,16 @@ def generate_combinations(analise, quantidade):
         Certifique-se de variar o tamanho das sequências (de 2 a 15 números, conforme disponíveis) and evite incluir apenas sequências longas ou raras para manter a diversidade.
         
         4. **Classificações**:
+        - Dados: {classificacoes}
+        - Descrição: Este dicionário representa a distribuição das dezenas com base em quatro critérios combinados, codificados nas chaves no formato 'PI-B-NP-F'. Cada letra ou grupo de letras na chave indica uma característica da dezena. 
+        A primeira parte refere-se à paridade dos dígitos da dezena: 'PP' indica que tanto o primeiro quanto o segundo dígito são pares, 'PI' indica par no primeiro dígito e ímpar no segundo, 'IP' representa o inverso (ímpar no primeiro e par no segundo), e 'II' indica que ambos os dígitos são ímpares. 
+        A segunda parte, identificada como 'B' ou 'M', representa a posição da dezena no volante da loteria, sendo 'B' para dezenas localizadas na borda e 'M' para dezenas posicionadas no miolo. 
+        O terceiro critério trata da primalidade do número, onde 'P' indica que a dezena é um número primo e 'NP' que não é. 
+        Por fim, o último elemento indica a presença ou não da dezena na sequência de Fibonacci, sendo 'F' para aquelas que fazem parte da sequência e 'NF' para as que não fazem.
+        Dessa forma, cada chave do dicionário representa uma combinação única desses quatro atributos, e os valores associados são listas com as dezenas que se enquadram em cada uma dessas classificações.
         - Dados: {analise['classificacoes']}
-        - Descrição: Este é um dicionário onde as chaves são strings representando categorias ou padrões predefinidos das dezenas (ex.: 'PP-B-P-F'), e os valores são inteiros indicando quantas vezes as dezenas dessas categorias apareceram. 
-        O significado exato das siglas não é fornecido, mas presume-se que sejam critérios como posição, frequência ou outros atributos estatísticos.
-        - Instrução: Diversifique as combinações incorporando dezenas de diferentes classificações, proporcionalmente às suas contagens, para explorar padrões variados.
+        - Descrição: Este dicionário representa a frequência das dezenas com base na classificação acima.
+        - Instrução: Diversifique as combinações incorporando dezenas proporcionalmente às frequências de cada classificação, evitando a concentração excessiva em uma única categoria.
 
         **Objetivo**: Gere {quantidade} combinações que maximizem as chances de sucesso no próximo concurso, considerando as análises fornecidas. Certifique-se de que:
         - Cada combinação tenha exatamente 15 números únicos.
@@ -180,7 +186,7 @@ def generate_combinations(analise, quantidade):
 
 if __name__ == "__main__":
     num_concursos = int(input("Quantos concursos você deseja analisar? "))
-    analise = analyze_data(num_concursos)
+    classificacoes,analise = analyze_data(num_concursos)
     quantidade = int(input("Quantas combinações você deseja gerar? "))
     
     print("Resultados da Análise:\n")
@@ -190,6 +196,6 @@ if __name__ == "__main__":
     print(f"Classificações: {analise['classificacoes']}\n")
     print("-------------------------\n")  # Linha em branco para separar as seções
   
-    sugestoes = generate_combinations(analise, quantidade)
+    sugestoes = generate_combinations(classificacoes,analise, quantidade)
     print("Sugestões de combinações:")
     print(sugestoes)
