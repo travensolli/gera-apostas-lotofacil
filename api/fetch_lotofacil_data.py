@@ -35,6 +35,12 @@ def save_to_database(data):
     print("Dados salvos no banco de dados com sucesso!")
 
 def save_single_result(cursor, item):
+    # Verificar se o concurso já existe na tabela resultados
+    cursor.execute('SELECT 1 FROM resultados WHERE concurso = ?', (item["concurso"],))
+    if cursor.fetchone():
+        print(f"Concurso {item['concurso']} já existe na tabela resultados. Ignorando...")
+        return
+        
     # Inserir dados na tabela resultados
     cursor.execute('''
         INSERT INTO resultados (

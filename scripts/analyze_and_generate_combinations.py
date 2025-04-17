@@ -168,7 +168,7 @@ def generate_combinations(analise, quantidade):
 
     # Fazer a chamada para a API da OpenAI
     response = openai.chat.completions.create(
-        model="gpt-4.5-preview",
+        model="gpt-4.1",
         messages=[
             {"role": "system", "content": "Você é um especialista em estatísticas de loteria e análise de dados para tomada de decisão"},
             {"role": "user", "content": prompt}

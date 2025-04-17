@@ -24,10 +24,8 @@ def verificar_acertos(aposta, resultados):
 # Iterar sobre cada conjunto de dezenas dos concursos
 resultados_anteriores = df[[f"Dezena{i}" for i in range(1, 16)]].values.tolist()
 apostas = [[1, 3, 4, 5, 6, 9, 13, 14, 15, 19, 20, 21, 22, 24, 25],
-    [1, 2, 3, 8, 9, 10, 11, 13, 14, 16, 18, 20, 22, 24, 25],
-    [2, 3, 5, 8, 10, 11, 12, 13, 14, 15, 18, 20, 21, 22, 23],
-    [1, 2, 7, 8, 9, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24],
-    [1, 3, 4, 8, 9, 10, 11, 14, 16, 17, 18, 20, 22, 23, 25]
+    [1, 2, 4, 5, 8, 10, 11, 12, 14, 17, 19, 21, 22, 23, 24]
+
 
 ]
 
