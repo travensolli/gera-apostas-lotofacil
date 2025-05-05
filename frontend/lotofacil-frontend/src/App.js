@@ -1,30 +1,47 @@
+import { useState } from "react";
 import UpdateDatabase from "./components/UpdateDatabase";
 import DatabaseView from "./components/DatabaseView";
 import GenerateCombinations from "./components/GenerateCombinations";
+import Navbar from './components/Navbar';
 import "./App.css";
 
 function App() {
+  const [activeTab, setActiveTab] = useState("database");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Lotofácil</h1>
-      </header>
+      <Navbar />
       <main>
-        <section className="update-database">
-          <h2>Atualizar Base de Dados</h2>
-          <UpdateDatabase />
-        </section>
+        <div className="tabs">
+          <button
+            className={activeTab === "database" ? "active" : ""}
+            onClick={() => setActiveTab("database")}
+          >
+            Dados dos Concursos
+          </button>
+          <button
+            className={activeTab === "generator" ? "active" : ""}
+            onClick={() => setActiveTab("generator")}
+          >
+            Gerador de Apostas
+          </button>
+        </div>
 
-        <section className="database-view">
-          <h2>Exibição da Base de Dados</h2>
-          <DatabaseView />
-        </section>
+        {activeTab === "database" && (
+          <section className="database-view">
+            <h2>Exibição da Base de Dados</h2>
+            <DatabaseView />
+          </section>
+        )}
 
-        <section className="generate-combinations">
-          <h2>Sugestões de Apostas</h2>
-          <GenerateCombinations />
-        </section>
+        {activeTab === "generator" && (
+          <section className="generate-combinations">
+            <h2>Sugestões de Apostas</h2>
+            <GenerateCombinations />
+          </section>
+        )}
       </main>
+
     </div>
   );
 }

@@ -6,8 +6,6 @@ Este projeto foi desenvolvido para realizar análises estatísticas e gerar comb
 
 ```
 gera-apostas-lotofacil/
-├── acertos_minhas_apostas.xlsx
-├── acertos_minhas_apostas0.xlsx
 ├── lotofacil_data.json
 ├── README.md
 ├── requirements.txt
