@@ -4,6 +4,26 @@ import json
 import os
 from collections import Counter, defaultdict
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field, field_validator, ValidationError
+from typing import List
+
+class Aposta(BaseModel):
+    dezenas: List[int] = Field(..., min_length=15, max_length=15)
+
+    @field_validator("dezenas")
+    @classmethod
+    def validar_dezenas(cls, v):
+        if sorted(v) != v:
+            raise ValueError("A lista de dezenas deve estar em ordem crescente.")
+        if len(set(v)) != 15:
+            raise ValueError("Dezenas não podem se repetir.")
+        if any(d < 1 or d > 25 for d in v):
+            raise ValueError("As dezenas devem estar entre 1 e 25.")
+        return v
+
+class ApostasModel(BaseModel):
+    apostas: List[Aposta]
+
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -120,10 +140,31 @@ def generate_combinations(classificacoes, analise, quantidade):
 
     prompt = (
         f"""
-        Você é um especialista em análise estatística de loterias, com foco na Lotofácil, um jogo em que são sorteados 15 números dentre 25 possíveis (de 1 a 25). 
-        Sua tarefa é sugerir {quantidade} combinações de 15 dezenas para apostar no próximo concurso, utilizando dados históricos e análises estatísticas como base. 
-        Cada combinação deve ser uma lista única contendo exatamente 15 números inteiros entre 1 e 25, sem repetições, ordenados em ordem crescente e formatados entre colchetes, com os números separados por vírgulas. 
-        Por exemplo: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].
+        Você é um especialista em análise estatística de loterias, com foco na Lotofácil — um jogo em que 15 números são sorteados entre os números de 1 a 25.
+
+        Sua tarefa é gerar **exatamente {quantidade} combinações únicas**, cada uma contendo **15 números inteiros distintos entre 1 e 25**, com base em análises estatísticas de concursos anteriores.
+        As combinações devem ser compatíveis com a seguinte validação Python (Pydantic):
+
+        ```python
+        from pydantic import BaseModel, Field
+        from typing import List
+
+        class Aposta(BaseModel):
+            dezenas: List[int] = Field(..., min_length=15, max_length=15)
+
+            @field_validator("dezenas")
+            @classmethod
+            def validar_dezenas(cls, v):
+                if sorted(v) != v:
+                    raise ValueError("A lista de dezenas deve estar em ordem crescente.")
+                if len(set(v)) != 15:
+                    raise ValueError("Dezenas não podem se repetir.")
+                if any(d < 1 or d > 25 for d in v):
+                    raise ValueError("As dezenas devem estar entre 1 e 25.")
+                return v
+
+        class ApostasModel(BaseModel):
+            apostas: List[Aposta]
 
         Para gerar essas combinações, você deve se basear nas seguintes análises de dados históricos da Lotofácil, extraídas de concursos anteriores:
 
@@ -160,12 +201,23 @@ def generate_combinations(classificacoes, analise, quantidade):
         - Descrição: Este dicionário representa a frequência das dezenas com base na classificação acima.
         - Instrução: Diversifique as combinações incorporando dezenas proporcionalmente às frequências de cada classificação, evitando a concentração excessiva em uma única categoria.
 
-        **Objetivo**: Gere {quantidade} combinações que maximizem as chances de sucesso no próximo concurso, considerando as análises fornecidas. Certifique-se de que:
-        - Cada combinação tenha exatamente 15 números únicos.
-        - Todos os números estejam entre 1 e 25.
-        - As combinações sejam distintas entre si.
-        - Os números em cada combinação estejam em ordem crescente e no formato especificado.
+        ### Regras obrigatórias:
+        - Cada combinação deve conter **exatamente 15 dezenas únicas**.
+        - Todos os números devem estar entre **1 e 25** (inclusive).
+        - As dezenas em cada combinação devem estar em **ordem crescente**.
+        O resultado deve ser apenas uma **lista de listas** no formato JSON/Python padrão, como este exemplo:
 
+        apostas = [
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+            [2, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 25],
+            ...
+        ]
+
+        **Sempre inclua a variável (`apostas =`)**
+        **Não inclua comentários ou explicações**
+        **O conteúdo deve começar diretamente com `[` e terminar com `]`**
+
+        Gere agora as {quantidade} combinações de apostas no formato especificado.
         """
     )
 
@@ -181,21 +233,37 @@ def generate_combinations(classificacoes, analise, quantidade):
         ]
     )
 
-    # Retornar as combinações sugeridas
-    return response.choices[0].message.content
+    # Resposta como string (esperado: "apostas = [[...], [...]]")
+    sugestoes_raw = response.choices[0].message.content
+    #print(sugestoes_raw)
+
+    # Executa apenas a linha que define `apostas`
+    local_vars = {}
+    try:
+        exec(sugestoes_raw, {}, local_vars)
+        apostas_lista = local_vars.get("apostas")
+        if not isinstance(apostas_lista, list):
+            raise ValueError("Formato inválido: variável 'apostas' não encontrada ou não é uma lista.")
+
+        # Validação com Pydantic
+        apostas_validadas = ApostasModel(apostas=[Aposta(dezenas=a) for a in apostas_lista])
+        return apostas_validadas
+
+    except (SyntaxError, NameError, ValidationError, ValueError) as e:
+        raise RuntimeError(f"Erro ao processar sugestões da IA: {e}")
 
 if __name__ == "__main__":
     num_concursos = int(input("Quantos concursos você deseja analisar? "))
     classificacoes,analise = analyze_data(num_concursos)
     quantidade = int(input("Quantas combinações você deseja gerar? "))
     
-    print("Resultados da Análise:\n")
-    print(f"Frequências das dezenas (top 15): {analise['frequencias'][:15]}\n")
-    print(f"Pares e ímpares: {analise['pares_impares']}\n")
-    print(f"Números consecutivos: {analise['consecutivos']}\n")
-    print(f"Classificações: {analise['classificacoes']}\n")
-    print("-------------------------\n")  # Linha em branco para separar as seções
+    # print("Resultados da Análise:\n")
+    # print(f"Frequências das dezenas (top 15): {analise['frequencias'][:15]}\n")
+    # print(f"Pares e ímpares: {analise['pares_impares']}\n")
+    # print(f"Números consecutivos: {analise['consecutivos']}\n")
+    # print(f"Classificações: {analise['classificacoes']}\n")
+    # print("-------------------------\n")  # Linha em branco para separar as seções
   
-    sugestoes = generate_combinations(classificacoes,analise, quantidade)
-    print("Sugestões de combinações:")
-    print(sugestoes)
+    sugestoes_model = generate_combinations(classificacoes, analise, quantidade)
+    for i, aposta in enumerate(sugestoes_model.apostas, start=1):
+        print(f"Aposta {i}: {aposta.dezenas}")

@@ -1,6 +1,1192 @@
 [
     {
         "loteria": "lotofacil",
+        "concurso": 3382,
+        "data": "03/05/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "13",
+            "09",
+            "23",
+            "21",
+            "15",
+            "02",
+            "22",
+            "04",
+            "11",
+            "03",
+            "05",
+            "19",
+            "24",
+            "25",
+            "08"
+        ],
+        "dezenas": [
+            "02",
+            "03",
+            "04",
+            "05",
+            "08",
+            "09",
+            "11",
+            "13",
+            "15",
+            "19",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 1,
+                "valorPremio": 1383714.42
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 347,
+                "valorPremio": 1194.45
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 12009,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 146225,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 717953,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3383,
+        "dataProximoConcurso": "05/05/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            }
+        ],
+        "valorArrecadado": 21947865.0,
+        "valorAcumuladoConcurso_0_5": 592835.86,
+        "valorAcumuladoConcursoEspecial": 90823176.97,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3381,
+        "data": "02/05/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "12",
+            "21",
+            "15",
+            "14",
+            "17",
+            "10",
+            "11",
+            "18",
+            "20",
+            "16",
+            "07",
+            "19",
+            "08",
+            "25",
+            "09"
+        ],
+        "dezenas": [
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 1,
+                "valorPremio": 2291867.94
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 554,
+                "valorPremio": 1239.17
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 14864,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 104253,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 630404,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3382,
+        "dataProximoConcurso": "03/05/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "CERQUILHO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "SP"
+            }
+        ],
+        "valorArrecadado": 24572235.0,
+        "valorAcumuladoConcurso_0_5": 369656.12,
+        "valorAcumuladoConcursoEspecial": 90488407.34,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3380,
+        "data": "30/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "17",
+            "21",
+            "24",
+            "25",
+            "15",
+            "12",
+            "05",
+            "07",
+            "20",
+            "11",
+            "23",
+            "14",
+            "06",
+            "02",
+            "16"
+        ],
+        "dezenas": [
+            "02",
+            "05",
+            "06",
+            "07",
+            "11",
+            "12",
+            "14",
+            "15",
+            "16",
+            "17",
+            "20",
+            "21",
+            "23",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 3,
+                "valorPremio": 2837584.67
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 567,
+                "valorPremio": 2060.85
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 19593,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 236007,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 1290160,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3381,
+        "dataProximoConcurso": "02/05/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "SALVADOR",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "BA"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "BRASILIA",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "DF"
+            }
+        ],
+        "valorArrecadado": 46013589.0,
+        "valorAcumuladoConcurso_0_5": 0.0,
+        "valorAcumuladoConcursoEspecial": 89933923.15,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3379,
+        "data": "29/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "05",
+            "22",
+            "17",
+            "07",
+            "24",
+            "15",
+            "09",
+            "11",
+            "06",
+            "14",
+            "21",
+            "03",
+            "25",
+            "10",
+            "12"
+        ],
+        "dezenas": [
+            "03",
+            "05",
+            "06",
+            "07",
+            "09",
+            "10",
+            "11",
+            "12",
+            "14",
+            "15",
+            "17",
+            "21",
+            "22",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 0,
+                "valorPremio": 0.0
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 227,
+                "valorPremio": 1941.57
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 8190,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 104615,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 562135,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": true,
+        "proximoConcurso": 3380,
+        "dataProximoConcurso": "30/04/2025",
+        "localGanhadores": [],
+        "valorArrecadado": 18872289.0,
+        "valorAcumuladoConcurso_0_5": 3982541.64,
+        "valorAcumuladoConcursoEspecial": 88990128.9,
+        "valorAcumuladoProximoConcurso": 3982541.64,
+        "valorEstimadoProximoConcurso": 7000000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3378,
+        "data": "28/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "01",
+            "13",
+            "18",
+            "14",
+            "12",
+            "25",
+            "17",
+            "15",
+            "09",
+            "24",
+            "04",
+            "06",
+            "07",
+            "03",
+            "19"
+        ],
+        "dezenas": [
+            "01",
+            "03",
+            "04",
+            "06",
+            "07",
+            "09",
+            "12",
+            "13",
+            "14",
+            "15",
+            "17",
+            "18",
+            "19",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 2,
+                "valorPremio": 707016.36
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 388,
+                "valorPremio": 1091.64
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 10556,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 115164,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 600606,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3379,
+        "dataProximoConcurso": "29/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "BELA VISTA DE GOIAS",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "GO"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "JUNDIAI",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "SP"
+            }
+        ],
+        "valorArrecadado": 19548810.0,
+        "valorAcumuladoConcurso_0_5": 2273837.83,
+        "valorAcumuladoConcursoEspecial": 88634148.93,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3377,
+        "data": "26/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "19",
+            "07",
+            "21",
+            "09",
+            "02",
+            "18",
+            "16",
+            "11",
+            "10",
+            "01",
+            "03",
+            "06",
+            "05",
+            "25",
+            "22"
+        ],
+        "dezenas": [
+            "01",
+            "02",
+            "03",
+            "05",
+            "06",
+            "07",
+            "09",
+            "10",
+            "11",
+            "16",
+            "18",
+            "19",
+            "21",
+            "22",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 4,
+                "valorPremio": 446181.71
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 240,
+                "valorPremio": 2227.48
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 7602,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 102218,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 581846,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3378,
+        "dataProximoConcurso": "28/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "PORTO ALEGRE",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "RS"
+            },
+            {
+                "ganhadores": 2,
+                "municipio": "INDAIATUBA",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "SP"
+            }
+        ],
+        "valorArrecadado": 20685147.0,
+        "valorAcumuladoConcurso_0_5": 2045768.04,
+        "valorAcumuladoConcursoEspecial": 88292044.23,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3376,
+        "data": "25/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "09",
+            "11",
+            "21",
+            "23",
+            "24",
+            "10",
+            "02",
+            "07",
+            "04",
+            "18",
+            "25",
+            "14",
+            "05",
+            "17",
+            "01"
+        ],
+        "dezenas": [
+            "01",
+            "02",
+            "04",
+            "05",
+            "07",
+            "09",
+            "10",
+            "11",
+            "14",
+            "17",
+            "18",
+            "21",
+            "23",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 1,
+                "valorPremio": 1328937.38
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 422,
+                "valorPremio": 943.29
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 13139,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 135181,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 654766,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3377,
+        "dataProximoConcurso": "26/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            }
+        ],
+        "valorArrecadado": 20568636.0,
+        "valorAcumuladoConcurso_0_5": 1757908.88,
+        "valorAcumuladoConcursoEspecial": 87860255.46,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3375,
+        "data": "24/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "07",
+            "24",
+            "12",
+            "09",
+            "01",
+            "08",
+            "02",
+            "16",
+            "03",
+            "15",
+            "21",
+            "20",
+            "23",
+            "25",
+            "22"
+        ],
+        "dezenas": [
+            "01",
+            "02",
+            "03",
+            "07",
+            "08",
+            "09",
+            "12",
+            "15",
+            "16",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 2,
+                "valorPremio": 853282.63
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 167,
+                "valorPremio": 2142.68
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 6850,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 89202,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 517390,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3376,
+        "dataProximoConcurso": "25/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "BRASILIA",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "DF"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "SAO PAULO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "SP"
+            }
+        ],
+        "valorArrecadado": 18982512.0,
+        "valorAcumuladoConcurso_0_5": 1543564.14,
+        "valorAcumuladoConcursoEspecial": 87538738.35,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3374,
+        "data": "23/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "11",
+            "18",
+            "14",
+            "12",
+            "20",
+            "05",
+            "17",
+            "15",
+            "04",
+            "06",
+            "24",
+            "10",
+            "08",
+            "07",
+            "21"
+        ],
+        "dezenas": [
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "10",
+            "11",
+            "12",
+            "14",
+            "15",
+            "17",
+            "18",
+            "20",
+            "21",
+            "24"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 2,
+                "valorPremio": 772851.83
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 216,
+                "valorPremio": 2143.51
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 8177,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 99419,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 520010,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3375,
+        "dataProximoConcurso": "24/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 2,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            }
+        ],
+        "valorArrecadado": 18542880.0,
+        "valorAcumuladoConcurso_0_5": 1268311.68,
+        "valorAcumuladoConcursoEspecial": 87125859.66,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3373,
+        "data": "22/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "15",
+            "19",
+            "17",
+            "06",
+            "04",
+            "14",
+            "12",
+            "24",
+            "03",
+            "23",
+            "10",
+            "22",
+            "01",
+            "13",
+            "21"
+        ],
+        "dezenas": [
+            "01",
+            "03",
+            "04",
+            "06",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "17",
+            "19",
+            "21",
+            "22",
+            "23",
+            "24"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 4,
+                "valorPremio": 1097857.53
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 418,
+                "valorPremio": 2234.63
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 15862,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 196796,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 1038713,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3374,
+        "dataProximoConcurso": "23/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 2,
+                "municipio": "CANAL ELETRONICO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "--"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "BAURU",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "SP"
+            },
+            {
+                "ganhadores": 1,
+                "municipio": "NOVO ACORDO",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "TO"
+            }
+        ],
+        "valorArrecadado": 37120113.0,
+        "valorAcumuladoConcurso_0_5": 1019004.64,
+        "valorAcumuladoConcursoEspecial": 86751899.08,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3372,
+        "data": "19/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "07",
+            "12",
+            "15",
+            "11",
+            "13",
+            "22",
+            "24",
+            "04",
+            "19",
+            "09",
+            "08",
+            "20",
+            "03",
+            "01",
+            "18"
+        ],
+        "dezenas": [
+            "01",
+            "03",
+            "04",
+            "07",
+            "08",
+            "09",
+            "11",
+            "12",
+            "13",
+            "15",
+            "18",
+            "19",
+            "20",
+            "22",
+            "24"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 0,
+                "valorPremio": 0.0
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 408,
+                "valorPremio": 934.62
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 12259,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 129562,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 630455,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": true,
+        "proximoConcurso": 3373,
+        "dataProximoConcurso": "22/04/2025",
+        "localGanhadores": [],
+        "valorArrecadado": 19727196.0,
+        "valorAcumuladoConcurso_0_5": 516040.12,
+        "valorAcumuladoConcursoEspecial": 85997452.29,
+        "valorAcumuladoProximoConcurso": 1273050.08,
+        "valorEstimadoProximoConcurso": 4000000.0
+    },
+    {
+        "loteria": "lotofacil",
+        "concurso": 3371,
+        "data": "17/04/2025",
+        "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",
+        "dezenasOrdemSorteio": [
+            "22",
+            "18",
+            "13",
+            "19",
+            "11",
+            "24",
+            "08",
+            "06",
+            "15",
+            "16",
+            "23",
+            "17",
+            "21",
+            "20",
+            "07"
+        ],
+        "dezenas": [
+            "06",
+            "07",
+            "08",
+            "11",
+            "13",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+        ],
+        "trevos": [],
+        "timeCoracao": null,
+        "mesSorte": null,
+        "premiacoes": [
+            {
+                "descricao": "15 acertos",
+                "faixa": 1,
+                "ganhadores": 1,
+                "valorPremio": 1926398.67
+            },
+            {
+                "descricao": "14 acertos",
+                "faixa": 2,
+                "ganhadores": 225,
+                "valorPremio": 1795.21
+            },
+            {
+                "descricao": "13 acertos",
+                "faixa": 3,
+                "ganhadores": 8560,
+                "valorPremio": 30.0
+            },
+            {
+                "descricao": "12 acertos",
+                "faixa": 4,
+                "ganhadores": 98841,
+                "valorPremio": 12.0
+            },
+            {
+                "descricao": "11 acertos",
+                "faixa": 5,
+                "ganhadores": 521352,
+                "valorPremio": 6.0
+            }
+        ],
+        "estadosPremiados": [],
+        "observacao": "",
+        "acumulou": false,
+        "proximoConcurso": 3372,
+        "dataProximoConcurso": "19/04/2025",
+        "localGanhadores": [
+            {
+                "ganhadores": 1,
+                "municipio": "ITURAMA",
+                "nomeFatansiaUL": "",
+                "serie": "",
+                "posicao": 1,
+                "uf": "MG"
+            }
+        ],
+        "valorArrecadado": 20574813.0,
+        "valorAcumuladoConcurso_0_5": 310709.47,
+        "valorAcumuladoConcursoEspecial": 85689456.29,
+        "valorAcumuladoProximoConcurso": 0.0,
+        "valorEstimadoProximoConcurso": 1800000.0
+    },
+    {
+        "loteria": "lotofacil",
         "concurso": 3370,
         "data": "16/04/2025",
         "local": "ESPAÇO DA SORTE em SÃO PAULO, SP",

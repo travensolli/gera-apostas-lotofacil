@@ -176,3 +176,24 @@ cython_debug/
 # Excel files
 *.xlsx
 *.xls
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npm/
+.eslintcache
+.parcel-cache/
+.next/
+out/
+.nuxt/
+dist/
+.cache/
+.vscode/
+.DS_Store
+*.log
