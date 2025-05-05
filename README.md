@@ -2,22 +2,54 @@
 
 Este projeto foi desenvolvido para realizar análises estatísticas e gerar combinações de apostas para a Lotofácil, utilizando dados históricos e integração com a API da OpenAI.
 
-## Estrutura do Projeto
+## Estrutura do Projeto Atualizada
 
 ```
-lotofacil/
-├── api/
-│   ├── fetch_lotofacil_data.py  # Script para consumir dados da API da Lotofácil
-├── database/
-│   ├── lotofacil.db             # Banco de dados SQLite com os resultados históricos
-│   ├── setup_database.py        # Script para configurar o banco de dados
-├── scripts/
-│   ├── analyze_and_generate_combinations.py  # Análise e geração de combinações com OpenAI
-│   ├── generate_accuracy_report.py           # Geração de relatório de acertos
-├── .env                         # Arquivo para armazenar variáveis de ambiente (ex.: chave da API OpenAI)
-├── requirements.txt             # Dependências do projeto
-└── README.md                    # Documentação do projeto
+gera-apostas-lotofacil/
+├── acertos_minhas_apostas.xlsx
+├── acertos_minhas_apostas0.xlsx
+├── lotofacil_data.json
+├── README.md
+├── requirements.txt
+├── backend/
+│   ├── api/
+│   │   ├── fetch_lotofacil_data.py
+│   │   ├── main.py
+│   ├── database/
+│   │   ├── lotofacil.db
+│   │   ├── setup_database.py
+│   ├── scripts/
+│   │   ├── analyze_and_generate_combinations.py
+│   │   ├── generate_accuracy_report.py
+├── frontend/
+│   ├── lotofacil-frontend/
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── public/
+│   │   │   ├── favicon.ico
+│   │   │   ├── index.html
+│   │   │   ├── logo192.png
+│   │   │   ├── logo512.png
+│   │   │   ├── manifest.json
+│   │   │   ├── robots.txt
+│   │   ├── src/
+│   │   │   ├── App.css
+│   │   │   ├── App.js
+│   │   │   ├── App.test.js
+│   │   │   ├── index.css
+│   │   │   ├── index.js
+│   │   │   ├── logo.svg
+│   │   │   ├── reportWebVitals.js
+│   │   │   ├── setupTests.js
+│   │   │   ├── components/
+│   │   │       ├── DatabaseView.css
+│   │   │       ├── DatabaseView.js
+│   │   │       ├── GenerateCombinations.css
+│   │   │       ├── GenerateCombinations.js
+│   │   │       ├── UpdateDatabase.js
 ```
+
+Essa estrutura reflete a separação clara entre o back-end e o front-end, com o front-end consolidado no diretório `frontend/`. Certifique-se de ajustar os caminhos no código, se necessário.
 
 ## Funcionalidades
 
@@ -33,6 +65,20 @@ lotofacil/
 4. **Relatório de Acertos**:
    - O script `generate_accuracy_report.py` verifica a quantidade de acertos de combinações fornecidas em relação aos resultados históricos e gera um arquivo Excel com os dados.
 
+## Funcionalidades do Front-End
+
+O front-end foi desenvolvido para facilitar a interação com os dados e funcionalidades do projeto. Ele inclui:
+
+1. **Exibição da Base de Dados**:
+   - Uma tabela interativa que exibe os dados históricos da Lotofácil armazenados no banco de dados.
+   - Suporte para paginação, permitindo escolher o número de itens por página.
+   - Ordenação clicando no cabeçalho das colunas, com alternância entre ordem ascendente e descendente.
+   - Filtragem por intervalo de datas para refinar os resultados exibidos.
+
+2. **Sugestões de Apostas**:
+   - Um espaço dedicado para configurar e exibir sugestões de apostas baseadas em análises estatísticas.
+   - Permite definir o número de concursos anteriores a serem avaliados e a quantidade de apostas desejadas.
+
 ## Pré-requisitos
 
 - Python 3.8 ou superior
@@ -46,7 +92,7 @@ lotofacil/
 1. Clone o repositório:
    ```bash
    git clone <url-do-repositorio>
-   cd lotofacil
+   cd gera-apostas-lotofacil
    ```
 
 2. Crie um ambiente virtual e ative-o:
@@ -66,31 +112,56 @@ lotofacil/
    OPENAI_API_KEY=insira_sua_chave_aqui
    ```
 
+## Instalação do Front-End
+
+1. Navegue até o diretório do front-end:
+   ```bash
+   cd frontend
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+
+O front-end estará disponível em `http://localhost:3000`.
+
 ## Uso
 
 ### 1. Configurar o Banco de Dados
 Execute o script para criar as tabelas no banco de dados:
 ```bash
-python database/setup_database.py
+python backend/database/setup_database.py
 ```
 
 ### 2. Consumir Dados da API
 Obtenha os dados mais recentes da Lotofácil:
 ```bash
-python api/fetch_lotofacil_data.py
+python backend/api/fetch_lotofacil_data.py
 ```
 
 ### 3. Analisar Dados e Gerar Combinações
 Realize análises e gere combinações de apostas:
 ```bash
-python scripts/analyze_and_generate_combinations.py
+python backend/scripts/analyze_and_generate_combinations.py
 ```
 
 ### 4. Gerar Relatório de Acertos
 Verifique os acertos de combinações fornecidas:
 ```bash
-python scripts/generate_accuracy_report.py
+python backend/scripts/generate_accuracy_report.py
 ```
+
+## Uso do Front-End
+
+- **Atualizar Base de Dados**: Atualize os dados históricos diretamente pelo front-end.
+- **Exibir Dados**: Visualize os dados em uma tabela interativa com suporte para paginação, ordenação e filtragem.
+- **Gerar Sugestões de Apostas**: Configure os parâmetros e visualize as apostas sugeridas diretamente na interface.
 
 ## Contribuição
 
