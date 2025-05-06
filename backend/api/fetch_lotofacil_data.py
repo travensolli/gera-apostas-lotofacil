@@ -20,7 +20,7 @@ def fetch_lotofacil_data():
         return None
 
 def save_to_database(data):
-    connection = sqlite3.connect("database/lotofacil.db")
+    connection = sqlite3.connect("./backend/database/lotofacil.db")
     cursor = connection.cursor()
 
     # Verificar se `data` é uma lista
