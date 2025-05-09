@@ -25,13 +25,20 @@ app.add_middleware(
 @app.post("/update-database")
 def update_database():
     try:
+        # Construir o caminho absoluto do banco de dados
+        db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database/lotofacil.db"))
+
+        # Verificar se o arquivo do banco de dados existe
+        if not os.path.exists(db_path):
+            return {"error": f"Arquivo do banco de dados não encontrado: {db_path}"}
+
         data = fetch_lotofacil_data()
         if data:
             save_to_database(data)
             return {"message": "Base de dados atualizada com sucesso!"}
         return {"error": "Erro ao buscar dados da API"}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Erro ao acessar o banco de dados: {str(e)}"}
 
 @app.post("/generate-combinations")
 def generate_combinations_endpoint(request: GenerateCombinationsRequest):

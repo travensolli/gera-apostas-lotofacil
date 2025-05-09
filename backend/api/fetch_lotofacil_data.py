@@ -1,6 +1,7 @@
 import requests
 import json
 import sqlite3
+import os
 
 def fetch_lotofacil_data():
     url = "https://loteriascaixa-api.herokuapp.com/api/lotofacil"
@@ -20,7 +21,8 @@ def fetch_lotofacil_data():
         return None
 
 def save_to_database(data):
-    connection = sqlite3.connect("./backend/database/lotofacil.db")
+    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database/lotofacil.db"))
+    connection = sqlite3.connect(db_path)
     cursor = connection.cursor()
 
     # Verificar se `data` é uma lista
