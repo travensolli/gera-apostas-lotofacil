@@ -16,9 +16,15 @@ const GenerateBets = () => {
   const handleGenerate = async () => {
     try {
       const response = await axios.post('http://localhost:5000/generate-combinations', inputs);
-      setResults(response.data.combinations || []); // Ensure combinations exist and fallback to an empty array
+      if (response.data && response.data.combinations && response.data.combinations.apostas) {
+        setResults(response.data.combinations.apostas);
+      } else {
+        console.error('Unexpected API response format:', response.data);
+        setResults([]);
+      }
     } catch (error) {
       console.error('Error generating bets:', error);
+      setResults([]); // Clear results in case of error
     }
   };
 
@@ -47,16 +53,18 @@ const GenerateBets = () => {
         </label>
       </form>
       <button onClick={handleGenerate}>Gerar</button>
-      <table>
+      <table style={{ borderCollapse: 'collapse', width: '100%' }}>
         <thead>
           <tr>
-            <th>Aposta</th>
+            <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left' }}>#</th>
+            <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left' }}>Dezenas</th>
           </tr>
         </thead>
         <tbody>
           {results.map((result, index) => (
             <tr key={index}>
-              <td>{result}</td>
+              <td style={{ border: '1px solid black', padding: '8px' }}>{index + 1}</td>
+              <td style={{ border: '1px solid black', padding: '8px' }}>{result.dezenas.join(', ')}</td>
             </tr>
           ))}
         </tbody>
